@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyo Auto Clinic LLC - Mechanical Workshop | Orlando, FL</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            dark: '#0e1e16',
+                            accent: '#4ade80'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <!-- Top Bar -->
+        <div class="bg-brand-900/60 border-b border-brand-800/50 text-xs py-1.5 px-4">
+            <div class="max-w-7xl mx-auto flex justify-between items-center text-slate-300">
+                <div class="flex items-center space-x-6">
+                    <a href="https://maps.google.com/?q=3609+OLD+WINTER+GARDEN,+Orlando+Fl+32805" target="_blank" class="hover:text-brand-400 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-location-dot text-brand-500"></i>
+                        <span>3609 OLD WINTER GARDEN, Orlando FL 32805</span>
+                    </a>
+                    <span class="hidden md:inline-flex items-center gap-1.5">
+                        <i class="fa-regular fa-clock text-brand-500"></i>
+                        <span>Lun - Vie: 8:00 AM - 6:00 PM | Sáb: 8:00 AM - 2:00 PM</span>
+                    </span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="tel:14077350717" class="hover:text-brand-400 transition flex items-center gap-1">
+                        <i class="fa-solid fa-phone text-brand-500"></i>
+                        <span>+1 (407) 735-0717</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Nav -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- SVG Brand Logo -->
+                <a href="#" class="flex items-center group py-2">
+                    <svg viewBox="0 0 500 200" class="h-14 w-auto fill-current text-brand-500">
+                        <!-- Car Outline Top -->
+                        <path d="M 160 50 C 190 20, 310 20, 340 50 C 345 53, 355 60, 365 60 C 375 60, 385 62, 385 65 C 385 68, 365 75, 345 78 C 300 85, 200 85, 155 78 C 135 75, 115 68, 115 65 C 115 62, 125 60, 135 60 C 145 60, 155 53, 160 50 Z" fill="none" stroke="#22c55e" stroke-width="7" stroke-linecap="round"/>
+                        <!-- Rear View Mirror Left -->
+                        <path d="M 140 58 C 130 55, 120 58, 125 64 Z" fill="#22c55e"/>
+                        <!-- Rear View Mirror Right -->
+                        <path d="M 360 58 C 370 55, 380 58, 375 64 Z" fill="#22c55e"/>
+                        <!-- Lower Sweeping Arc -->
+                        <path d="M 120 70 Q 250 120 380 70" fill="none" stroke="#22c55e" stroke-width="6" stroke-linecap="round"/>
+                        <!-- Brand Text -->
+                        <text x="250" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-style="italic" font-size="34" fill="#ffffff" text-anchor="middle">Toyo Auto Clinic LLC</text>
+                        <!-- Subtitle -->
+                        <text x="250" y="155" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="13" fill="#22c55e" letter-spacing="7" text-anchor="middle">MECHANICAL WORKSHOP</text>
+                        <!-- Year Dividers -->
+                        <line x1="190" y1="180" x2="215" y2="180" stroke="#22c55e" stroke-width="2"/>
+                        <text x="250" y="184" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="13" fill="#94a3b8" letter-spacing="3" text-anchor="middle">2023</text>
+                        <line x1="285" y1="180" x2="310" y2="180" stroke="#22c55e" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-slate-300 hover:text-brand-400 transition font-medium text-sm">Inicio</a>
+                    <a href="#servicios" class="text-slate-300 hover:text-brand-400 transition font-medium text-sm">Servicios</a>
+                    <a href="#cotizador" class="text-slate-300 hover:text-brand-400 transition font-medium text-sm">Cotizador Express</a>
+                    <a href="#nosotros" class="text-slate-300 hover:text-brand-400 transition font-medium text-sm">Nosotros</a>
+                    <a href="#contacto" class="text-slate-300 hover:text-brand-400 transition font-medium text-sm">Contacto</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="https://wa.me/14077350717" target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-brand-900/40 flex items-center gap-2 hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Agendar Cita</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-400 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block text-slate-300 hover:text-brand-400 py-2">Inicio</a>
+            <a href="#servicios" class="block text-slate-300 hover:text-brand-400 py-2">Servicios</a>
+            <a href="#cotizador" class="block text-slate-300 hover:text-brand-400 py-2">Cotizador Express</a>
+            <a href="#nosotros" class="block text-slate-300 hover:text-brand-400 py-2">Nosotros</a>
+            <a href="#contacto" class="block text-slate-300 hover:text-brand-400 py-2">Contacto</a>
+            <a href="https://wa.me/14077350717" target="_blank" class="block text-center bg-brand-600 text-white font-semibold py-3 rounded-xl mt-4">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Agendar por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&fit=crop&w=2000&q=80" alt="Taller Mecánico" class="w-full h-full object-cover opacity-20 filter blur-sm">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/80 to-slate-950"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.1)_0,transparent_100%)]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-950/80 border border-brand-500/30 text-brand-400 text-xs font-semibold mb-6">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Especialistas Autorizados & Latonería de Precisión</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Servicio Integral para tu Auto en <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-200">Orlando, FL</span>
+                    </h1>
+                    <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto lg:mx-0 font-normal">
+                        En <strong>Toyo Auto Clinic LLC</strong> brindamos soluciones avanzadas de mecánica general, latonería de alta precisión, pintura al horno y diagnóstico computarizado. Tu vehículo en manos expertas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/14077350717?text=Hola,%20quisiera%20solicitar%20un%20diagnóstico%20para%20mi%20vehículo" target="_blank" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-500 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-950/50 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Solicitar Diagnóstico</span>
+                        </a>
+                        <a href="#cotizador" class="w-full sm:w-auto bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-calculator text-brand-400"></i>
+                            <span>Calcular Presupuesto</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Features -->
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-white mb-1">100%</div>
+                            <div class="text-slate-400 text-xs">Garantía en Pintura</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-white mb-1">Fast</div>
+                            <div class="text-slate-400 text-xs">Entrega Puntual</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-white mb-1">OEM</div>
+                            <div class="text-slate-400 text-xs">Repuestos Originales</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Card / Quick Contact -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-900/90 border border-slate-800 p-8 rounded-3xl shadow-2xl backdrop-blur-xl relative">
+                        <div class="absolute -top-3 -right-3 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            Atención Inmediata
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">¿Tuviste un accidente o falla mecánica?</h3>
+                        <p class="text-slate-400 text-sm mb-6">Envíanos una foto del problema o detalle para darte un estimado preliminar.</p>
+                        
+                        <form id="hero-quick-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Tu Nombre</label>
+                                <input type="text" id="hero-name" placeholder="Ej. Juan Pérez" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Modelo y Año del Auto</label>
+                                <input type="text" id="hero-car" placeholder="Ej. Toyota Corolla 2024" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Servicio Requerido</label>
+                                <select id="hero-service" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
+                                    <option value="Latonería y Pintura">Latonería y Pintura</option>
+                                    <option value="Mecánica General">Mecánica General</option>
+                                    <option value="Mantenimiento Preventivo">Mantenimiento Preventivo / Cambio Aceite</option>
+                                    <option value="Aire Acondicionado">Aire Acondicionado</option>
+                                    <option value="Diagnóstico Electrónico">Diagnóstico Electrónico</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-lg shadow-brand-950/50">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Consultar Gratis por WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-slate-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-400 font-semibold text-sm tracking-widest uppercase mb-2">Especialidades del Taller</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Nuestros Servicios Integrales</p>
+                <p class="text-slate-400 mt-4 text-base">Combinamos tecnología de última generación con mano de obra calificada para dejar tu vehículo como recién salido de concesionario.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Mecánica General</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Reparación de motores, transmisiones, frenos, suspensión y dirección. Diagnóstico certero de cualquier falla mecánica.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Sistemas de Frenos (Discos y Pastillas)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Tren Delantero y Amortiguadores</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Reparación de Motor y Transmisión</li>
+                    </ul>
+                    <a href="https://wa.me/14077350717?text=Hola,%20requiero%20información%20sobre%20Mecánica%20General" class="text-brand-400 hover:text-brand-300 text-sm font-semibold inline-flex items-center gap-2">
+                        <span>Consultar Servicio</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-spray-can"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Latonería y Pintura</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Restauración estructural tras colisiones y pintura al horno con igualación computarizada de color original.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Enderezado de chasis y carrocería</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Cabina de pintura al horno</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Eliminación de abolladuras (PDR)</li>
+                    </ul>
+                    <a href="https://wa.me/14077350717?text=Hola,%20requiero%20información%20sobre%20Latonería%20y%20Pintura" class="text-brand-400 hover:text-brand-300 text-sm font-semibold inline-flex items-center gap-2">
+                        <span>Consultar Servicio</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Diagnóstico por Computadora</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Escaneo de escáner avanzado OEM para detectar códigos de error, fallas eléctricas y luces Check Engine.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Lectura y borrado de códigos DTC</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Prueba de sensores y módulos</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Reset de mantenimientos</li>
+                    </ul>
+                    <a href="https://wa.me/14077350717?text=Hola,%20requiero%20un%20Diagnóstico%20Computarizado" class="text-brand-400 hover:text-brand-300 text-sm font-semibold inline-flex items-center gap-2">
+                        <span>Consultar Servicio</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Aire Acondicionado (A/C)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Mantenimiento preventivo y correctivo de clima. Carga de gas refrigerante, detección de fugas y compresores.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Recarga de Freón R134a / R1234yf</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Reparación de fugas y mangueras</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Limpieza y cambio de filtro cabina</li>
+                    </ul>
+                    <a href="https://wa.me/14077350717?text=Hola,%20necesito%20revisar%20el%20Aire%20Acondicionado" class="text-brand-400 hover:text-brand-300 text-sm font-semibold inline-flex items-center gap-2">
+                        <span>Consultar Servicio</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-oil-can"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Mantenimiento Preventivo</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Cuidado periódico para extender la vida útil del vehículo y prevenir fallas costosas en el futuro.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Cambio de aceite sintético y filtro</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Revisión de 25 puntos de seguridad</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Rotación de neumáticos y fluidos</li>
+                    </ul>
+                    <a href="https://wa.me/14077350717?text=Hola,%20quiero%20agendar%20Mantenimiento%20Preventivo" class="text-brand-400 hover:text-brand-300 text-sm font-semibold inline-flex items-center gap-2">
+                        <span>Consultar Servicio</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-car-battery"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Electricidad Automotriz</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Diagnóstico y corrección de alternadores, arranques, cableados y fallas eléctricas complejas.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Reemplazo de Baterías y Alternadores</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Luces LED e Iluminación</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Cortocircuitos y Fusibles</li>
+                    </ul>
+                    <a href="https://wa.me/14077350717?text=Hola,%20tengo%20un%20problema%20eléctrico%20en%20mi%20auto" class="text-brand-400 hover:text-brand-300 text-sm font-semibold inline-flex items-center gap-2">
+                        <span>Consultar Servicio</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Express Price Calculator Section -->
+    <section id="cotizador" class="py-24 bg-slate-950 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="bg-brand-950 text-brand-400 border border-brand-500/30 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">Herramienta Interactiva</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Cotizador Express de Servicio</h2>
+                    <p class="text-slate-400 text-sm mt-2">Selecciona los servicios que requiere tu auto para obtener una estimación aproximada instantánea.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Service Selectors -->
+                    <div class="space-y-4">
+                        <h4 class="text-white font-semibold text-sm mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-brand-500"></i> Selecciona los servicios:
+                        </h4>
+
+                        <label class="flex items-center justify-between p-4 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-brand-500/50 transition">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="service-calc w-5 h-5 accent-brand-600 rounded" data-price="65" data-name="Cambio de Aceite Sintético">
+                                <span class="text-sm font-medium text-slate-200">Cambio Aceite Sintético + Filtro</span>
+                            </div>
+                            <span class="text-xs font-bold text-brand-400">~$65</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-4 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-brand-500/50 transition">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="service-calc w-5 h-5 accent-brand-600 rounded" data-price="45" data-name="Diagnóstico Computarizado">
+                                <span class="text-sm font-medium text-slate-200">Diagnóstico Escáner Computarizado</span>
+                            </div>
+                            <span class="text-xs font-bold text-brand-400">~$45</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-4 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-brand-500/50 transition">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="service-calc w-5 h-5 accent-brand-600 rounded" data-price="120" data-name="Servicio Frenos Delanteros">
+                                <span class="text-sm font-medium text-slate-200">Servicio Frenos (Pastillas + Rectificación)</span>
+                            </div>
+                            <span class="text-xs font-bold text-brand-400">~$120</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-4 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-brand-500/50 transition">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="service-calc w-5 h-5 accent-brand-600 rounded" data-price="85" data-name="Recarga y Mantenimiento de A/C">
+                                <span class="text-sm font-medium text-slate-200">Recarga de A/C y Revisión Fugas</span>
+                            </div>
+                            <span class="text-xs font-bold text-brand-400">~$85</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-4 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-brand-500/50 transition">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="service-calc w-5 h-5 accent-brand-600 rounded" data-price="150" data-name="Evaluación Latonería/Pintura">
+                                <span class="text-sm font-medium text-slate-200">Evaluación Latonería (Base Pieza)</span>
+                            </div>
+                            <span class="text-xs font-bold text-brand-400">Cotizar en Taller</span>
+                        </label>
+                    </div>
+
+                    <!-- Summary Box -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between h-full">
+                        <div>
+                            <h4 class="text-white font-semibold text-sm mb-4 border-b border-slate-800 pb-3 flex items-center justify-between">
+                                <span>Resumen de Estimado</span>
+                                <i class="fa-solid fa-receipt text-brand-500"></i>
+                            </h4>
+                            <div id="selected-list" class="space-y-2 mb-6 text-xs text-slate-400 min-h-[100px]">
+                                <p class="italic text-slate-600">Selecciona al menos un servicio para calcular...</p>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-800 pt-4">
+                            <div class="flex justify-between items-baseline mb-6">
+                                <span class="text-sm font-medium text-slate-300">Estimado Total Aprox:</span>
+                                <span id="total-price" class="text-3xl font-extrabold text-brand-400">$0 USD</span>
+                            </div>
+                            <p class="text-[10px] text-slate-500 mb-4">*Nota: El precio definitivo se confirma en taller tras la inspección física del vehículo.</p>
+                            <button id="send-whatsapp-calc" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Enviar Estimado por WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="nosotros" class="py-24 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brand-400 font-semibold text-sm tracking-widest uppercase">Compromiso y Calidad</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-6">¿Por qué confiar tu vehículo a Toyo Auto Clinic LLC?</h2>
+                    <p class="text-slate-400 text-base leading-relaxed mb-8">
+                        Nos enfocamos en brindar un trato transparente y honesto. Entendemos lo importante que es tu auto para tu rutina diaria, por eso trabajamos con rapidez, repuestos garantizados y presupuestos sin sorpresas.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-xl">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base mb-1">Técnicos Certificados</h4>
+                                <p class="text-slate-400 text-sm">Personal capacitado en marcas japonesas, americanas y europeas.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-xl">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base mb-1">Precios Justos y Transparentes</h4>
+                                <p class="text-slate-400 text-sm">Explicación detallada de cada repuesto y labor antes de iniciar cualquier reparación.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-brand-950 border border-brand-500/30 rounded-xl flex items-center justify-center text-brand-400 text-xl">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base mb-1">Garantía por Escrito</h4>
+                                <p class="text-slate-400 text-sm">Respaldamos cada trabajo realizado tanto en mecánica como en pintura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1000&q=80" alt="Mecánico trabajando" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 bg-slate-950/90 border border-slate-800 backdrop-blur-md p-6 rounded-2xl">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-bold text-base">Atención Personalizada</div>
+                                    <div class="text-slate-400 text-xs">Visítanos en 3609 OLD WINTER GARDEN, Orlando</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-brand-400 font-semibold text-sm tracking-widest uppercase">Resolvemos tus Dudas</h2>
+                <p class="text-3xl font-extrabold text-white mt-2">Preguntas Frecuentes</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-slate-900 border border-slate-800 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>¿Necesito pedir cita previa para una revisión?</span>
+                        <span class="transition group-open:-rotate-180 text-brand-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">
+                        Recomendamos agendar previa cita para asegurar una atención inmediata y reducir tiempos de espera, pero también recibimos emergencias viales directamente en nuestro taller.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900 border border-slate-800 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>¿Ofrecen garantía en los trabajos de pintura y latonería?</span>
+                        <span class="transition group-open:-rotate-180 text-brand-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">
+                        Sí, todos nuestros trabajos de pintura cuentan con garantía contra descoloramiento, cuarteado o imperfecciones gracias al uso de materiales de alta durabilidad y curado al horno.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900 border border-slate-800 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>¿Cuánto tiempo toma un trabajo de latonería y pintura?</span>
+                        <span class="transition group-open:-rotate-180 text-brand-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">
+                        El tiempo varía según la gravedad del daño. Reparaciones menores o retoques pueden tomar de 24 a 48 horas, mientras que restauraciones tras accidentes mayores se estiman al momento de la inspección.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contacto" class="py-24 bg-slate-900/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5">
+                    <span class="text-brand-400 font-semibold text-sm tracking-widest uppercase">Ubicación y Horarios</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 mb-6">Visita Nuestro Taller</h2>
+                    <p class="text-slate-400 text-sm mb-8">Estamos estratégicamente ubicados en Orlando, FL. Ven a visitarnos o contáctanos por teléfono o WhatsApp.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-950 border border-brand-500/30 rounded-lg flex items-center justify-center text-brand-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm">Dirección</h5>
+                                <p class="text-slate-400 text-sm mt-0.5">3609 OLD WINTER GARDEN, Orlando FL 32805</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-950 border border-brand-500/30 rounded-lg flex items-center justify-center text-brand-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm">Teléfono / WhatsApp</h5>
+                                <p class="text-slate-400 text-sm mt-0.5">+1 (407) 735-0717</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-950 border border-brand-500/30 rounded-lg flex items-center justify-center text-brand-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm">Horario de Atención</h5>
+                                <p class="text-slate-400 text-sm mt-0.5">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                                <p class="text-slate-400 text-sm">Sábados: 8:00 AM - 2:00 PM</p>
+                                <p class="text-slate-500 text-xs">Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-slate-800">
+                        <a href="https://maps.google.com/?q=3609+OLD+WINTER+GARDEN,+Orlando+Fl+32805" target="_blank" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition">
+                            <i class="fa-solid fa-map-location-dot text-brand-400"></i>
+                            <span>Abrir en Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map Frame -->
+                <div class="lg:col-span-7">
+                    <div class="w-full h-full min-h-[400px] bg-slate-800 rounded-3xl overflow-hidden border border-slate-800 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.664878235496!2d-81.4285!3d28.5435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77a2a00000001%3A0x0!2s3609%20Old%20Winter%20Garden%20Rd%2C%20Orlando%2C%20FL%2032805!5e0!3m2!1ses!2sus!4v1700000000000!5m2!1ses!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full min-h-[400px] grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 pt-12 pb-8 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-900 pb-8">
+                <div class="flex items-center gap-3">
+                    <svg viewBox="0 0 500 200" class="h-10 w-auto fill-current text-brand-500">
+                        <path d="M 160 50 C 190 20, 310 20, 340 50 C 345 53, 355 60, 365 60 C 375 60, 385 62, 385 65 C 385 68, 365 75, 345 78 C 300 85, 200 85, 155 78 C 135 75, 115 68, 115 65 C 115 62, 125 60, 135 60 C 145 60, 155 53, 160 50 Z" fill="none" stroke="#22c55e" stroke-width="7" stroke-linecap="round"/>
+                        <path d="M 120 70 Q 250 120 380 70" fill="none" stroke="#22c55e" stroke-width="6" stroke-linecap="round"/>
+                        <text x="250" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-style="italic" font-size="36" fill="#ffffff" text-anchor="middle">Toyo Auto Clinic LLC</text>
+                    </svg>
+                </div>
+                <div class="flex space-x-6 text-slate-400">
+                    <a href="#inicio" class="hover:text-brand-400 transition">Inicio</a>
+                    <a href="#servicios" class="hover:text-brand-400 transition">Servicios</a>
+                    <a href="#cotizador" class="hover:text-brand-400 transition">Cotizador</a>
+                    <a href="#contacto" class="hover:text-brand-400 transition">Contacto</a>
+                </div>
+                <div class="flex space-x-4 text-base text-slate-400">
+                    <a href="https://wa.me/14077350717" target="_blank" class="hover:text-brand-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://maps.google.com/?q=3609+OLD+WINTER+GARDEN,+Orlando+Fl+32805" target="_blank" class="hover:text-brand-400 transition"><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-slate-600">
+                <p>&copy; 2023 - 2026 Toyo Auto Clinic LLC. Todos los derechos reservados. Orlando, Florida.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/14077350717?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Quick Form WhatsApp Submit
+        document.getElementById('hero-quick-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('hero-name').value;
+            const car = document.getElementById('hero-car').value;
+            const service = document.getElementById('hero-service').value;
+
+            const text = `Hola Toyo Auto Clinic! Mi nombre es ${name}. Tengo un ${car} y necesito cotizar/agendar el servicio de: ${service}.`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/14077350717?text=${encodedText}`, '_blank');
+        });
+
+        // Express Calculator Logic
+        const checkboxes = document.querySelectorAll('.service-calc');
+        const listContainer = document.getElementById('selected-list');
+        const totalPriceEl = document.getElementById('total-price');
+        const whatsappCalcBtn = document.getElementById('send-whatsapp-calc');
+
+        function updateCalculator() {
+            let total = 0;
+            let selectedItems = [];
+            listContainer.innerHTML = '';
+
+            checkboxes.forEach(cb => {
+                if(cb.checked) {
+                    const name = cb.getAttribute('data-name');
+                    const price = parseInt(cb.getAttribute('data-price'));
+                    total += price;
+                    selectedItems.push(name);
+
+                    const itemEl = document.createElement('div');
+                    itemEl.className = 'flex justify-between items-center py-1 border-b border-slate-900';
+                    itemEl.innerHTML = `<span>• ${name}</span> <span class="text-brand-400 font-semibold">~$${price}</span>`;
+                    listContainer.appendChild(itemEl);
+                }
+            });
+
+            if (selectedItems.length === 0) {
+                listContainer.innerHTML = '<p class="italic text-slate-600">Selecciona al menos un servicio para calcular...</p>';
+                totalPriceEl.textContent = '$0 USD';
+            } else {
+                totalPriceEl.textContent = `$${total} USD`;
+            }
+
+            return selectedItems;
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', updateCalculator));
+
+        whatsappCalcBtn.addEventListener('click', () => {
+            const items = updateCalculator();
+            if (items.length === 0) {
+                alert('Por favor selecciona al menos un servicio en el cotizador.');
+                return;
+            }
+            const total = totalPriceEl.textContent;
+            const message = `Hola! Estuve cotizando en su web y me interesan los siguientes servicios:\n- ${items.join('\n- ')}\n\nEstimado aproximado: ${total}.\n¿Podrían darme más detalles?`;
+            window.open(`https://wa.me/14077350717?text=${encodeURIComponent(message)}`, '_blank');
+        });
+    </script>
+</body>
+</html>
